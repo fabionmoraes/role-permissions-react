@@ -26,6 +26,6 @@ var Checkbox = function (_a) {
         });
         handleChange(alterCheck);
     };
-    return ((0, jsx_runtime_1.jsx)("div", { children: roles.map(function (value, i) { return ((0, jsx_runtime_1.jsxs)("div", __assign({ className: "role-fd" }, { children: [(0, jsx_runtime_1.jsx)("input", { type: "checkbox", name: value.name, value: value.value, defaultChecked: value.checked, className: className || "fd", onChange: handleCheckbox }, void 0), (0, jsx_runtime_1.jsx)("span", { children: value.value }, void 0)] }), String(i))); }) }, void 0));
+    return ((0, jsx_runtime_1.jsx)("div", { children: roles.map(function (value, i) { return ((0, jsx_runtime_1.jsxs)("div", __assign({ className: className || "role-fd" }, { children: [(0, jsx_runtime_1.jsx)("input", { type: "checkbox", name: value.name, value: value.value, defaultChecked: value.checked, onChange: handleCheckbox }, void 0), (0, jsx_runtime_1.jsx)("span", { children: value.value }, void 0)] }), String(i))); }) }, void 0));
 };
 exports.Checkbox = Checkbox;
