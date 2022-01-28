@@ -1,0 +1,56 @@
+{
+  "name": "role-permissions-react",
+  "version": "1.0.1",
+  "description": "Easy permissions frontend React JS",
+  "main": "dist/index.js",
+  "types": "dist/index.d.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/fabionmoraes/role-permissions-react"
+  },
+  "files": [
+    "dist"
+  ],
+  "peerDependencies": {
+    "react": ">=16",
+    "react-dom": ">=16"
+  },
+  "jest": {
+    "verbose": true,
+    "coveragePathIgnorePatterns": [
+      "/src/index.ts"
+    ]
+  },
+  "scripts": {
+    "clean": "rm -rf ./dist",
+    "prepublishOnly": "yarn build",
+    "build": "yarn tsc",
+    "release": "auto shipit",
+    "test": "jest"
+  },
+  "keywords": [
+    "permissions",
+    "roles",
+    "frontend",
+    "nodejs",
+    "reactjs"
+  ],
+  "author": "Fabio Moraes <fabim.nmoraes@gmail.com>",
+  "license": "ISC",
+  "preferGlobal": "true",
+  "devDependencies": {
+    "@types/jest": "^27.4.0",
+    "@types/react": "^17.0.38",
+    "auto": "^10.32.6",
+    "jest": "^27.4.7",
+    "ts-jest": "^27.1.3",
+    "typescript": "^4.5.5"
+  },
+  "auto": {
+    "plugins": [
+      "npm",
+      "released"
+    ],
+    "onlyPublishWithReleaseLabel": true
+  }
+}
