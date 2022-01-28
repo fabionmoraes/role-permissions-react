@@ -132,6 +132,54 @@ export const App = () => {
 
 ```
 
-- Retorno de permissão para página
+- Não permitindo o usuário ter acesso a página caso não tenha permissão
 
-... criando conteúdo
+### NextPermissions
+
+```tsx
+...
+import { nextPermission } from 'role-permissions-react';
+
+const App = () => {
+
+  useEffect(() => {
+    async function loadUsers() {
+      const response = await ... //fetch users api
+      const me = response.data
+
+      const passed = nextPermissions({
+        roles: me.roles,
+        pathname: 'teste' // Validar uma rota específica por padrão puxa pela URL location. Ex: http..s.com/users = users
+      })
+      // {
+      //   ...
+      //   "roles": [
+      //     {
+      //       "id": 10,
+      //       "name": "Teste",
+      //       "slug": "teste",
+      //       "permissions": [
+      //         {
+      //           "name": "users",
+      //           "permissions": {
+      //             "POST": false,
+      //             "GET": true,
+      //             "UPDATE": false,
+      //             "DELETE": true
+      //           }
+      //         },
+      //       ],
+      //     }
+      //   ]
+      // }
+
+      if (!passed) {
+        // Algum erro ou retorno para página inicial
+      }
+    }
+  }, [])
+
+  return(...)
+}
+
+```

@@ -13,3 +13,4 @@ Object.defineProperty(exports, "__esModule", { value: true });
 __exportStar(require("./lib/handlePermission"), exports);
 __exportStar(require("./lib/permissions"), exports);
 __exportStar(require("./lib/checkbox"), exports);
+__exportStar(require("./lib/nextPermissions"), exports);
