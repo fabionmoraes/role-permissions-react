@@ -4,4 +4,4 @@ export interface PermissionsProps {
     name: string;
     permissions: any;
 }
-export declare const permissions: ({ index, item, permissions, }: IDataPermissions) => IPermissionsReturnProps[];
+export declare const permissions: ({ index, item, permissions, alter_methods, }: IDataPermissions) => IPermissionsReturnProps[];

@@ -10,9 +10,9 @@ interface ICheckbox {
 }
 
 export const Checkbox: FC<ICheckbox> = ({ className, handleChange, data }) => {
-  const { index, item, permissions: check } = data;
+  const { index, item, permissions: check, alter_methods } = data;
 
-  const roles = permissions({ index, item, permissions: check });
+  const roles = permissions({ index, item, permissions: check, alter_methods });
 
   const handleCheckbox = (event: any) => {
     const alterCheck = handlePermissions({
@@ -34,7 +34,7 @@ export const Checkbox: FC<ICheckbox> = ({ className, handleChange, data }) => {
             defaultChecked={value.checked}
             onClick={handleCheckbox}
           />
-          <span>{value.value}</span>
+          <span>{value?.alter_method || value.value}</span>
         </div>
       ))}
     </div>

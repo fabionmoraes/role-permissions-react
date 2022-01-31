@@ -183,3 +183,35 @@ const App = () => {
 }
 
 ```
+
+### Funcionalidades
+
+#### Checkbox
+
+- alter_methods => Altera o nome do retorno de GET para EDITAR ...
+- index => O indíce do map de uma array
+- item => Valor de uma array
+- permissions => As roles do usuário das permissões
+
+```tsx
+import React from "react";
+
+const App: React.FC = () => {
+  return (
+    <Checkbox
+      handleChange={handleCheckbox}
+      data={{
+        index,
+        item,
+        permissions: check,
+        alter_methods: {
+          get: "EDITAR",
+          post: "CRIAR",
+          update: "ATUALIZAR",
+          delete: "DELETAR",
+        },
+      }}
+    />
+  );
+};
+```
