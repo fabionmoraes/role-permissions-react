@@ -8,10 +8,10 @@ var nextPermission = function (_a) {
     if (!roles) {
         return true;
     }
-    var roleNames = roles.map(function (item) { return item.name; });
+    var roleNames = roles.map(function (item) { return item.name.toUpperCase(); });
     if (!pathnameAlter)
         return true;
-    if (roleNames.includes("Admin"))
+    if (roleNames.includes("ADMIN"))
         return true;
     var userPermissions = roles.map(function (role) { return role.permissions; });
     var permission = userPermissions
